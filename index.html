@@ -1,1 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalamX Limited | Building Practical Digital Solutions for Africa</title>
+    <meta name="description" content="SalamX Limited (RC 8831809) - Nigerian tech company building practical digital solutions for Africa.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #10b981;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+            color: white;
+            text-align: center;
+            padding: 120px 20px 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card i {
+            font-size: 3.2rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+        
+        .founder {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .founder-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .products {
+            background: #f1f5f9;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .under-dev {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        
+        .coming-soon {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SalamX</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
 
+    <!-- Hero / Home -->
+    <section id="home" class="hero">
+        <h1>SalamX Limited</h1>
+        <p style="font-size: 1.6rem; margin-bottom: 1rem;">RC 8831809</p>
+        <p>Building Practical Digital Solutions for Africa</p>
+        <a href="#services" class="btn">Explore Our Services</a>
+        <a href="#products" class="btn" style="background: transparent; border: 2px solid white; margin-left: 15px;">View Ecosystem</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>SalamX Limited is a Nigerian technology company (RC 8831809) committed to developing innovative and practical digital solutions that address the unique challenges of the African continent.</p>
+        </div>
+        
+        <h2 style="margin-top: 4rem;">Our Mission & Vision</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Mission</h3>
+                <p>To deliver reliable, affordable, and impactful digital solutions that empower businesses and individuals across Africa.</p>
+            </div>
+            <div class="card">
+                <h3>Vision</h3>
+                <p>To become Africa's leading technology ecosystem, creating scalable solutions that drive digital transformation across the continent.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 4rem;">Founder</h2>
+        <div class="founder">
+            <img src="https://pbs.twimg.com/profile_images/2063380932589953025/O4isgnXh.jpg" alt="Umar Bello Tafida" class="founder-img">
+            <h3>Umar Bello Tafida</h3>
+            <p><strong>Founder & CEO</strong></p>
+            <p>Visionary leader with a passion for technology and African development.</p>
+            <a href="https://x.com/umarbellotafida" target="_blank" rel="noopener noreferrer" 
+               style="color: var(--primary); text-decoration: none; font-size: 1.1rem; margin-top: 1rem; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fab fa-x-twitter"></i> Follow on X
+            </a>
+            <a href="https://github.com/salamxdev" target="_blank" rel="noopener noreferrer" 
+               style="color: var(--primary); text-decoration: none; font-size: 1.1rem; margin-top: 8px; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fab fa-github"></i> GitHub @salamxdev
+            </a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="background: #f8fafc;">
+        <h2>Our Services</h2>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Modern, fast, and scalable web applications tailored to your business needs.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Apps</h3>
+                <p>Native and cross-platform mobile solutions for Android and iOS.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Solutions</h3>
+                <p>Secure, reliable, and cost-effective cloud infrastructure and services.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>IT Consulting</h3>
+                <p>Strategic technology advisory and digital transformation guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="products">
+        <h2>Our Ecosystem</h2>
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>SalamX AI</h3>
+                <p>Intelligent AI solutions for African businesses and users.</p>
+                <span class="status under-dev">Under Development</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-comments"></i>
+                <h3>SalamChat</h3>
+                <p>Next-generation communication platform.</p>
+                <span class="status coming-soon">Coming Soon</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Salam Cloud Computing</h3>
+                <p>African-first cloud infrastructure.</p>
+                <span class="status coming-soon">Coming Soon</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>SalamOS</h3>
+                <p>Custom operating system for African needs.</p>
+                <span class="status coming-soon">Coming Soon</span>
+            </div>
+            <div class="card">
+                <i class="fas fa-credit-card"></i>
+                <h3>SalamPay</h3>
+                <p>Seamless digital payment solutions.</p>
+                <span class="status coming-soon">Coming Soon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+        <p style="text-align: center; margin-top: 2rem;">
+            Email: <a href="mailto:info@salamx.ng" style="color: var(--primary);">info@salamx.ng</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 SalamX Limited (RC 8831809). All Rights Reserved.</p>
+        <p>Nigeria • Building Africa's Digital Future</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle (basic)
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            alert("Mobile navigation would open here (full version can be expanded)");
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been received. (This is a static demo - form would normally send via backend)");
+            this.reset();
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
